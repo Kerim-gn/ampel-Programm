@@ -1,16 +1,19 @@
 
 
 function main() {
-    var input = document.getElementById("age");
-    var age = input.value; 
+    var inputspeed = document.getElementById("speed");
+    var inputmaxspeed = document.getElementById("maxspeed");
+    var blitz = document.getElementById("Blitzer")
 
-    if(age < 0 || age >= 115){
-    alert("TRAGE EIN KORREKTES ALTER EIN")
-    } else if(age <= 6 || age >=60){
-    alert("du bekommst den sonderpreis");
-    } else if(age > 6 && age < 60){
-    alert("für dich gilt der normale preise");
-    }else{
-    alert("falscher eintrag");
+    var speed = parseInt(inputspeed.value); 
+    var check = blitz.checked;
+    var maxspeed = parseInt(inputmaxspeed.valu);
+    var endspeed = maxspeed * 1.10; //  = maxspeed +((maxspeed/100)*10); ist die lösung bei mir ist das probelm das 55 zu schnell nicht durchgeht 
+    
+    if(speed >= endspeed && check == true){
+        alert("der blitzer ist durchgegangen")
+    }else {
+       alert("verfahren wurde eingestellt")
     }
+
 }
