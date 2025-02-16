@@ -1,24 +1,16 @@
 
 
 function main() {
-    var input = document.getElementById("x");
-   /* if( passwort == 1111){
-        alert("du hast freien zugang")
-    }else{
-        alert("dein zugang wurde gespert")
-    }*/
-    //const Farbe = prompt("Gebe die gewünschte AmpelFarbe an,GRÜN,ORANGE,ROT");
-    var color = input.value;
-    var AmpelFarbe = color.toLowerCase();
-    
-    if(AmpelFarbe == "grün"){
-        alert("deine ampel farbe ist auf grün")
-    } else if (AmpelFarbe == "rot"){
-        alert("deine ampel farbe ist auf rot")
-    }else if ( AmpelFarbe == "orange"){
-        alert("deine ampel farbe ist auf orange")
-    }else{
-        alert("keine passende farbe")
-    }
+    var input = document.getElementById("age");
+    var age = input.value; 
 
+    if(age < 0 || age >= 115){
+    alert("TRAGE EIN KORREKTES ALTER EIN")
+    } else if(age <= 6 || age >=60){
+    alert("du bekommst den sonderpreis");
+    } else if(age > 6 && age < 60){
+    alert("für dich gilt der normale preise");
+    }else{
+    alert("falscher eintrag");
+    }
 }
