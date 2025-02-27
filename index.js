@@ -1,92 +1,46 @@
+var numbers = [
+    7,
+    48,
+    23,
+    9,
+    45,
+    67,
+    99,
+    1,
+    20,
+    77,
+    94
 
-var data = [
-    {
-        year: 2010,
-        revenue: [
-            {
-                month: "Q1",
-                revenue: 21500
-            },
-            {
-                month: "Q2",
-                revenue: 27300
-            },            {
-                month: "Q3",
-                revenue: 24800
-            },            {
-                month: "Q4",
-                revenue: 28900
-            },
-        ]
-    },
-    {
-        year: 2011,
-        revenue: [
-            {
-                month: "Q1",
-                revenue: 26400
-            },
-            {
-                month: "Q2",
-                revenue: 30300
-            },            {
-                month: "Q3",
-                revenue: 26200
-            },            {
-                month: "Q4",
-                revenue: 29100
-            },
-        ]
-    },   
-    {
-        year: 2012,
-        revenue: [
-            {
-                month: "Q1",
-                revenue: 31200
-            },
-            {
-                month: "Q2",
-                revenue: 29400
-            },            {
-                month: "Q3",
-                revenue: 34600
-            },            {
-                month: "Q4",
-                revenue: 37200
-            },
-        ]
-    }
 ]
-var totalRevenue = 0;
+var numbersTwo = [
+    15,
+    70,
+    80,
+    90,
+    2,
+    1,
+    3
+]
 
 
 function main() {
-    
+    var Promptnumber = prompt();
+    var wishnumber = parseInt(Promptnumber)
+    var result = filter ( numbers,wishnumber  )
+    console.log(result)
 
-     for(let i = 0; i < data.length; i++){
-        let yearindata = data[i]
-            console.log("year: " + yearindata.year );  
-            for(let j = 0; j < yearindata.revenue.length; j++){
-                let newrevenue = yearindata.revenue[j]
-                console.log("die aktuelle quatal zahl: " + newrevenue.month);
+    result = filter (numbersTwo, 30)
+    console.log(result)
+}
 
-                totalRevenue += newrevenue.revenue
-                console.log(" ausgabe im quatalmonat: " + newrevenue.revenue)
-                
-                }
-            }
-            console.log("gesamt ausgabe " + totalRevenue)
-            
-     }
-   
-    
-
-          
-           
-    
-        
-        // ↑
-    
-    
-    // Sample Data
+function filter(arrayToFilter, highestNumberToAllowed) {
+    var filteredNumbers = [];
+    for (let i = 0; i < arrayToFilter.length ; i++){
+        if (arrayToFilter[i] <= highestNumberToAllowed)
+            filteredNumbers.push(arrayToFilter[i])
+        else{
+            console.log ("deine eingabe ist ungültig")
+        }
+    }
+    return filteredNumbers
+}
