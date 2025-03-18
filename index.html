@@ -1,11 +1,35 @@
-<htmp>
+<html>
+    <head><link rel="stylesheet" href="index.css"></head>
     <body>
-        <h1>My Learning </h1>
+        <h1 class="titel">WEB-SHOP </h1>
+        
+        
+        <div class="tabelle">
+            <h2>preisliste</h2>
+            <h3>RAMAN-Spectra</h3>
+            <ul>
+            <li>..... 1 : 30€ <button onclick="hinzufuegen('ATR', 20)" id="button">hinzugüfen</button> </li> 
+            <li>..... 3 : 90€ <button onclick="hinzufuegen('ATR',20 )" id="button">hinzugüfen</button> </li> 
+            </ul>
+        </div>
         
         <div>
+            <h3>ATR-Spectra</h3>
+            <ul>
+            <li>..... 1 : 30€ <button onclick="hinzufuegen('raman 1', 20)" id="button">hinzugüfen</button> </li></li>
+            <li>..... 2 : 70€ <button onclick="hinzufuegen('raman 2', 20)" id="button">hinzugüfen</button> </li></li>
+            <li>..... 3 : 90€ <button onclick="hinzufuegen('raman 3', 20)" id="button">hinzugüfen</button> </li></li>
+            </ul> 
+        </div>
+        
+        <div class="label">
             <label for="button">Code Ausführen / Überpüfen:</label>
             <button onclick="main()">Überpüfen</button>
         </div>
+        <ul id="warenkorb"> warenkorb</ul> 
+
+
+        
     </body>
-    <script src=index.js type="text/javascript"></script>
-</htmp>
+    <script src="index.js" type="text/javascript"></script>
+</html>
